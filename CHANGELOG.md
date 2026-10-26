@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.1 - 2026-10-23
+
+- Updated Brotli libraries to fix CVE-2026-111497.
+
 ## v0.1.0 - 2026-06-08
 
 - Updated the Dockerfile to build from the current stable Alpine-based nginx image.
