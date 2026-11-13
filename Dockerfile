@@ -1,7 +1,8 @@
-FROM nginx:1.30.2-alpine
-# The base image includes vulnerable brotli-libs 1.2.0-r0 through libcurl and
-# freetype, even though this redirect does not decompress Brotli requests.
-# Require Alpine's 1.2.1-r0 fix for CVE-2026-111497.
-RUN apk add --no-cache 'brotli-libs>=1.2.1-r0'
+FROM nginx:1.30.6-alpine
+# Upgrade packages inherited from the base image, including NGINX module
+# libraries used outside this redirect's configuration.
+RUN apk upgrade --no-cache && \
+    # Check installed versions for fixes to CVE-2026-125350 and CVE-2026-111497.
+    apk info -e 'libxslt>=1.1.43-r4' 'brotli-libs>=1.2.1-r0'
 COPY default.conf /etc/nginx/conf.d
 EXPOSE 80
