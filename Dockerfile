@@ -1,4 +1,4 @@
-FROM nginx:1.30.6-alpine
+FROM nginx:1.30.7-alpine3.24
 # Upgrade packages inherited from the base image, including NGINX module
 # libraries used outside this redirect's configuration.
 RUN apk upgrade --no-cache && \

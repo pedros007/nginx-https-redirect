@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-11-19
+
+### Security
+
+- Updated NGINX to 1.30.7 and refreshed inherited Alpine packages to include current security fixes.
+
 ## [0.1.2] - 2026-11-13
 
 ### Security
@@ -21,5 +27,6 @@
 - Created the initial nginx HTTPS redirect image.
 - Added nginx configuration to redirect HTTP requests to HTTPS.
 
-[Unreleased]: https://github.com/pedros007/nginx-https-redirect/compare/0.1.2...HEAD
+[Unreleased]: https://github.com/pedros007/nginx-https-redirect/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/pedros007/nginx-https-redirect/releases/tag/v0.1.3
 [0.1.2]: https://github.com/pedros007/nginx-https-redirect/releases/tag/0.1.2
